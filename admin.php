@@ -1,0 +1,61 @@
+<?php
+include 'layout/header.php';
+include 'database.php';
+
+$db = new Database();
+
+if(isset($_POST['tambah'])){
+    $db->insertProduk(
+        $_POST['nama'],
+        $_POST['kategori'],
+        $_POST['harga'],
+        $_POST['gambar'],
+        $_POST['deskripsi']
+    );
+}
+
+if(isset($_GET['hapus'])){
+    $db->deleteProduk($_GET['hapus']);
+}
+?>
+
+<div class="container mt-5">
+  <h2>Admin Produk</h2>
+
+  <form method="POST">
+    <input type="text" name="nama" placeholder="Nama Produk" class="form-control mb-2">
+    <input type="text" name="kategori" placeholder="Kategori" class="form-control mb-2">
+    <input type="number" name="harga" placeholder="Harga" class="form-control mb-2">
+    <input type="text" name="gambar" placeholder="Nama file gambar" class="form-control mb-2">
+    <textarea name="deskripsi" placeholder="Deskripsi" class="form-control mb-2"></textarea>
+
+    <button name="tambah" class="btn btn-primary">Tambah</button>
+  </form>
+
+  <hr>
+
+  <table class="table">
+    <tr>
+      <th>Nama</th>
+      <th>Kategori</th>
+      <th>Harga</th>
+      <th>Aksi</th>
+    </tr>
+
+    <?php
+    $data = $db->getAllProduk();
+    while($row = $data->fetch_assoc()){
+    ?>
+    <tr>
+      <td><?php echo $row['nama']; ?></td>
+      <td><?php echo $row['kategori']; ?></td>
+      <td><?php echo $row['harga']; ?></td>
+      <td>
+        <a href="?hapus=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Hapus</a>
+      </td>
+    </tr>
+    <?php } ?>
+  </table>
+</div>
+
+<?php include 'layout/footer.php'; ?>
