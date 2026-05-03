@@ -19,24 +19,29 @@ if(isset($_GET['hapus'])){
 }
 ?>
 
-<div class="container mt-5">
-  <h2>Admin Produk</h2>
+<div class="container mt-5 text-center">
+  <h2 class="fw-bold mb-4">Admin Produk</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form method="POST">
 
-  <form method="POST">
-    <input type="text" name="nama" placeholder="Nama Produk" class="form-control mb-2">
-    <input type="text" name="kategori" placeholder="Kategori" class="form-control mb-2">
-    <input type="number" name="harga" placeholder="Harga" class="form-control mb-2">
-    <input type="text" name="gambar" placeholder="Nama file gambar" class="form-control mb-2">
-    <textarea name="deskripsi" placeholder="Deskripsi" class="form-control mb-2"></textarea>
+        <input type="text" name="nama" placeholder="Nama Produk" class="form-control mb-2">
+        <input type="text" name="kategori" placeholder="Kategori" class="form-control mb-2">
+        <input type="number" name="harga" placeholder="Harga" class="form-control mb-2">
+        <input type="text" name="gambar" placeholder="Nama file gambar" class="form-control mb-2">
+        <textarea name="deskripsi" placeholder="Deskripsi" class="form-control mb-2"></textarea>
 
-    <button name="tambah" class="btn btn-primary">Tambah</button>
-  </form>
+        <button name="tambah" class="btn btn-primary w-100">Tambah</button>
+      </form>
+    </div>
+  </div>
+</div>
 
   <hr>
 
   <table class="table">
     <tr>
-      <th>Nama</th>
+      <th class="ps-4">Nama</th>
       <th>Kategori</th>
       <th>Harga</th>
       <th>Aksi</th>
@@ -47,7 +52,7 @@ if(isset($_GET['hapus'])){
     while($row = $data->fetch_assoc()){
     ?>
     <tr>
-      <td><?php echo $row['nama']; ?></td>
+      <td class="ps-4"><?php echo $row['nama']; ?></td>
       <td><?php echo $row['kategori']; ?></td>
       <td><?php echo $row['harga']; ?></td>
       <td>
@@ -57,4 +62,5 @@ if(isset($_GET['hapus'])){
     <?php } ?>
   </table>
 </div>
+
 <?php include 'layout/footer.php'; ?>

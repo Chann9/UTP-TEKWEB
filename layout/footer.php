@@ -1,3 +1,3 @@
-<footer class="bg-dark text-white text-center p-3">
+<footer class='bg-dark text-white text-center p-3'>
   <p>SoundCheck</p>
 </footer>
