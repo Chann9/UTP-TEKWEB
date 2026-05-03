@@ -28,7 +28,6 @@ $db = new Database();
         </div>
 
         <div class="card-footer text-center bg-white border-0">
-          <button class="btn btn-warning btn-sm">🛒</button>
           <button class="btn btn-success btn-sm">Buy</button>
         </div>
       </div>
@@ -57,7 +56,6 @@ $db = new Database();
         </div>
 
         <div class="card-footer text-center bg-white border-0">
-          <button class="btn btn-warning btn-sm">🛒</button>
           <button class="btn btn-success btn-sm">Buy</button>
         </div>
       </div>
