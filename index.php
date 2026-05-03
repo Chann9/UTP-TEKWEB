@@ -2,28 +2,34 @@
 
 <style>
 .hero {
-    background: url('assets/img/bg-audio.jpg') no-repeat center center;
+    background: url('img/bg-audio.jpeg') no-repeat center center;
     background-size: cover;
-    height: 80vh;
-    color: white;
+    height: 90vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 
-.hero-overlay {
-    background: rgba(0,0,0,0.6);
-    padding: 40px;
-    border-radius: 10px;
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    color: white;
 }
 </style>
 
 <div class="hero">
-  <div class="hero-overlay">
-    <h1 class="display-4">SoundCheck</h1>
-    <p class="lead">Toko Audio & Earphone Terbaik</p>
-    <a href="produk.php" class="btn btn-warning">Lihat Produk</a>
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="display-4">Upgrade Audio Lo Sekarang</h1>
+      <p>Temukan produk audio terbaik</p>
+      <a href="produk.php" class="btn btn-danger">Lihat Produk</a>
+    </div>
   </div>
 </div>
 

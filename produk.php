@@ -2,36 +2,105 @@
 include 'layout/header.php'; 
 include 'database.php';
 
+// WAJIB: bikin object database
 $db = new Database();
-$data = $db->getAllProduk();
 ?>
 
 <div class="container mt-5">
-  <h2 class="text-center mb-4">Produk</h2>
+
+  <!-- AUDIO -->
+  <div class="text-center mb-4">
+    <h2 class="fw-bold">🎵 Produk Audio</h2>
+    <hr class="w-25 mx-auto">
+  </div>
 
   <div class="row">
+    <?php 
+    $data = $db->getAllProduk();
+    $count = 0;
 
-  <?php while($row = $data->fetch_assoc()) { ?>
-    
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-      <div class="card h-100">
-        <img src="assets/img/<?php echo $row['gambar']; ?>" class="card-img-top">
+    while($row = $data->fetch_assoc()){
+      if($row['kategori'] == 'Audio' && $count < 8){
+    ?>
 
-        <div class="card-body text-center">
-          <h5><?php echo $row['nama']; ?></h5>
-          <p class="text-muted"><?php echo $row['kategori']; ?></p>
-          <p>Rp <?php echo $row['harga']; ?></p>
-          <p><?php echo substr($row['deskripsi'],0,50); ?>...</p>
+    <div class="col-md-3 text-center mb-4">
 
-          <button class="btn btn-warning btn-sm">Keranjang</button>
-          <button class="btn btn-success btn-sm">Beli</button>
+      <!-- GAMBAR -->
+      <?php if($count % 4 == 0){ ?>
+        <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded float-start img-fluid">
+      <?php } elseif($count % 4 == 1){ ?>
+        <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded mx-auto d-block img-fluid">
+      <?php } elseif($count % 4 == 2){ ?>
+        <div class="text-center">
+          <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded img-fluid">
         </div>
-      </div>
+      <?php } else { ?>
+        <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded float-end img-fluid">
+      <?php } ?>
+
+      <!-- INFO -->
+      <h6 class="mt-2"><?php echo $row['nama']; ?></h6>
+      <p class="small text-muted">Rp <?php echo $row['harga']; ?></p>
+
+      <button class="btn btn-warning btn-sm">🛒</button>
+      <button class="btn btn-success btn-sm">Buy</button>
+
     </div>
 
-  <?php } ?>
-
+    <?php 
+        $count++;
+      }
+    } 
+    ?>
   </div>
+
+
+  <!-- EARPHONE -->
+  <div class="text-center mt-5 mb-4">
+    <h2 class="fw-bold">🎧 Produk Earphone</h2>
+    <hr class="w-25 mx-auto">
+  </div>
+
+  <div class="row">
+    <?php 
+    $data = $db->getAllProduk(); // ambil lagi data
+    $count = 0;
+
+    while($row = $data->fetch_assoc()){
+      if($row['kategori'] == 'Earphone' && $count < 8){
+    ?>
+
+    <div class="col-md-3 text-center mb-4">
+
+      <!-- GAMBAR -->
+      <?php if($count % 4 == 0){ ?>
+        <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded float-start img-fluid">
+      <?php } elseif($count % 4 == 1){ ?>
+        <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded mx-auto d-block img-fluid">
+      <?php } elseif($count % 4 == 2){ ?>
+        <div class="text-center">
+          <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded img-fluid">
+        </div>
+      <?php } else { ?>
+        <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded float-end img-fluid">
+      <?php } ?>
+
+      <!-- INFO -->
+      <h6 class="mt-2"><?php echo $row['nama']; ?></h6>
+      <p class="small text-muted">Rp <?php echo $row['harga']; ?></p>
+
+      <button class="btn btn-warning btn-sm">🛒</button>
+      <button class="btn btn-success btn-sm">Buy</button>
+
+    </div>
+
+    <?php 
+        $count++;
+      }
+    } 
+    ?>
+  </div>
+
 </div>
 
 <?php include 'layout/footer.php'; ?>
