@@ -29,7 +29,7 @@
     </div>
 
     <div class="col-md-6 text-center">
-      <img src="assets/img/bg-audio.jpg" class="img-fluid rounded" alt="Tentang Kami">
+      <img src="img/tentang.jpeg" class="img-fluid w-75 rounded shadow d-block mx-auto" alt="tentang">
     </div>
   </div>
 
