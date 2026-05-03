@@ -11,14 +11,12 @@ if(isset($_POST['update'])){
     $kategori = $_POST['kategori'];
     $harga = $_POST['harga'];
     $gambar = $_POST['gambar'];
-    $deskripsi = $_POST['deskripsi'];
 
     $db->db->query("UPDATE produk SET 
         nama='$nama',
         kategori='$kategori',
         harga='$harga',
         gambar='$gambar',
-        deskripsi='$deskripsi'
         WHERE id=$id");
 
     header("Location: admin.php");
@@ -53,11 +51,6 @@ if(isset($_POST['update'])){
         <div class="form-floating mb-3">
           <input type="text" name="gambar" class="form-control" value="<?php echo $data['gambar']; ?>">
           <label>Nama File Gambar</label>
-        </div>
-
-        <div class="form-floating mb-3">
-          <textarea name="deskripsi" class="form-control" style="height:100px"><?php echo $data['deskripsi']; ?></textarea>
-          <label>Deskripsi</label>
         </div>
 
         <button name="update" class="btn btn-primary w-100 mb-2">Update</button>

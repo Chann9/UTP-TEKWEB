@@ -9,8 +9,7 @@ if(isset($_POST['tambah'])){
         $_POST['nama'],
         $_POST['kategori'],
         $_POST['harga'],
-        $_POST['gambar'],
-        $_POST['deskripsi']
+        $_POST['gambar']
     );
 }
 
@@ -29,7 +28,6 @@ if(isset($_GET['hapus'])){
         <input type="text" name="kategori" placeholder="Kategori" class="form-control mb-2">
         <input type="number" name="harga" placeholder="Harga" class="form-control mb-2">
         <input type="text" name="gambar" placeholder="Nama file gambar" class="form-control mb-2">
-        <textarea name="deskripsi" placeholder="Deskripsi" class="form-control mb-2"></textarea>
 
         <button name="tambah" class="btn btn-primary w-100">Tambah</button>
       </form>

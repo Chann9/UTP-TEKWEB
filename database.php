@@ -16,11 +16,11 @@ class Database {
     }
 
     // CREATE
-    public function insertProduk($nama, $kategori, $harga, $gambar, $deskripsi) {
-        $stmt = $this->db->prepare("INSERT INTO produk (nama, kategori, harga, gambar, deskripsi) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssiss", $nama, $kategori, $harga, $gambar, $deskripsi);
-        return $stmt->execute();
-    }
+    public function insertProduk($nama, $kategori, $harga, $gambar) {
+    $stmt = $this->db->prepare("INSERT INTO produk (nama, kategori, harga, gambar) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $nama, $kategori, $harga, $gambar);
+    return $stmt->execute();
+}
 
     // READ
     public function getAllProduk() {
