@@ -56,6 +56,7 @@ if(isset($_GET['hapus'])){
       <td><?php echo $row['kategori']; ?></td>
       <td><?php echo $row['harga']; ?></td>
       <td>
+        <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
         <a href="?hapus=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Hapus</a>
       </td>
     </tr>

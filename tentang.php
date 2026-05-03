@@ -7,14 +7,13 @@
 
   <div class="row align-items-center">
     <div class="col-md-6">
-      <h4>SoundCheck Store</h4>
       <p>
         SoundCheck adalah toko yang berfokus pada penjualan berbagai produk audio berkualitas seperti speaker, headphone, dan earphone dari berbagai brand ternama. 
         Kami hadir untuk memberikan pengalaman audio terbaik bagi setiap pengguna.
       </p>
 
       <p>
-        Dengan perkembangan teknologi yang pesat, kami terus mengikuti tren terbaru di dunia audio agar dapat menyediakan produk yang modern, berkualitas, dan sesuai kebutuhan pelanggan.
+        Dengan perkembangan teknologi yang pesat, kami terus mengikuti trend terbaru di dunia audio agar dapat menyediakan produk yang modern, berkualitas, dan sesuai kebutuhan pelanggan.
       </p>
 
       <p>

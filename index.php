@@ -26,9 +26,9 @@
 <div class="hero">
   <div class="container">
     <div class="hero-content">
-      <h1 class="display-4">Upgrade Audio Lo Sekarang</h1>
-      <p>Temukan produk audio terbaik</p>
-      <a href="produk.php" class="btn btn-danger">Lihat Produk</a>
+      <h1 class="display-4">Upgrade Audio Kalian Sekarang Jugaaa</h1>
+      <p>Temukan produk audio terbaik di store kami!</p>
+      <a href="produk.php" class="btn btn-danger">Lihat Semua Produk</a>
     </div>
   </div>
 </div>
