@@ -2,16 +2,13 @@
 include 'layout/header.php'; 
 include 'database.php';
 
-// WAJIB: bikin object database
 $db = new Database();
 ?>
 
 <div class="container mt-5">
 
-  <!-- AUDIO -->
   <div class="text-center mb-4">
     <h2 class="fw-bold">🎵 Produk Audio</h2>
-    <hr class="w-25 mx-auto">
   </div>
 
   <div class="row">
@@ -25,7 +22,6 @@ $db = new Database();
 
     <div class="col-md-3 text-center mb-4">
 
-      <!-- GAMBAR -->
       <?php if($count % 4 == 0){ ?>
         <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded float-start img-fluid">
       <?php } elseif($count % 4 == 1){ ?>
@@ -38,7 +34,6 @@ $db = new Database();
         <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded float-end img-fluid">
       <?php } ?>
 
-      <!-- INFO -->
       <h6 class="mt-2"><?php echo $row['nama']; ?></h6>
       <p class="small text-muted">Rp <?php echo $row['harga']; ?></p>
 
@@ -54,16 +49,13 @@ $db = new Database();
     ?>
   </div>
 
-
-  <!-- EARPHONE -->
   <div class="text-center mt-5 mb-4">
     <h2 class="fw-bold">🎧 Produk Earphone</h2>
-    <hr class="w-25 mx-auto">
   </div>
 
   <div class="row">
     <?php 
-    $data = $db->getAllProduk(); // ambil lagi data
+    $data = $db->getAllProduk();
     $count = 0;
 
     while($row = $data->fetch_assoc()){
@@ -72,7 +64,6 @@ $db = new Database();
 
     <div class="col-md-3 text-center mb-4">
 
-      <!-- GAMBAR -->
       <?php if($count % 4 == 0){ ?>
         <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded float-start img-fluid">
       <?php } elseif($count % 4 == 1){ ?>
@@ -85,7 +76,6 @@ $db = new Database();
         <img src="assets/img/<?php echo $row['gambar']; ?>" class="rounded float-end img-fluid">
       <?php } ?>
 
-      <!-- INFO -->
       <h6 class="mt-2"><?php echo $row['nama']; ?></h6>
       <p class="small text-muted">Rp <?php echo $row['harga']; ?></p>
 

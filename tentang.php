@@ -3,7 +3,6 @@
 <div class="container mt-5">
   <div class="text-center mb-4">
     <h2 class="fw-bold">Tentang Kami</h2>
-    <hr class="w-25 mx-auto">
   </div>
 
   <div class="row align-items-center">

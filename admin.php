@@ -57,5 +57,4 @@ if(isset($_GET['hapus'])){
     <?php } ?>
   </table>
 </div>
-
 <?php include 'layout/footer.php'; ?>
